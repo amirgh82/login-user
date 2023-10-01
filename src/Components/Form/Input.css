@@ -1,0 +1,14 @@
+.form-input {
+    margin: 1rem auto;
+    width: 80%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 3px solid var(--gray-color);
+    outline: none;
+    background-color: var(--login-bg-color);
+}
+
+.form-input::placeholder {
+    font-family: var(--font-def);
+    font-size: 1.4rem;
+}

@@ -7,14 +7,14 @@ export default function Login() {
     <>
       <div className="login-container">
         <div className="login-form">
+          <h2 className="login-title">به <span>web codino </span>خوش اومدید</h2>
           <form>
-            <h2 className="login-title">صفحه ورود کاربر</h2>
             <Input type='text' placeholder='نام کاربری یا ایمیل' />
             <Input type='password' placeholder='رمز عبور' />
           </form>
         </div>
         <div className="login-picture">
-          
+
         </div>
       </div>
     </>

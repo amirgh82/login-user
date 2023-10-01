@@ -1,29 +1,33 @@
 .login-container {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 65%;
     height: 80vh;
     background-color: red;
 }
 
 .login-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: yellow;
-    width: 50%;
+    background-color: var(--login-bg-color);
+    width: 45%;
 }
 
 .login-form form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .login-title {
     font-family: var(--font-def);
+    color: #fff;
+    margin:0 3.1rem 2rem 0 ;
+    font-size: 2rem;
 }
 
 .login-picture {
-    width: 50%;
+    width: 55%;
     background-color: var(--purple-color);
 }
