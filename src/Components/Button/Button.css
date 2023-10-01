@@ -1,0 +1,16 @@
+.btn-submit {
+    border: none;
+    background-color:var(--purple-color);
+    /*padding: 1rem 0;
+    */color: #fff;
+    font-size: 1.3rem;
+    font-weight: 900;
+    font-family: var(--font-def);
+    cursor: pointer;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
