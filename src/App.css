@@ -4,9 +4,9 @@
 }
 
 :root {
-    --login-background-color: #333437;
+    --gray-color: #333437;
     --btn-border-color: #9C6FE4;
-    --btn-color: #925FE2;
+    --purple-color: #925FE2;
 }
 
 * {
@@ -24,4 +24,3 @@ a {
     color: #fff;
     text-decoration: none;
 }
-
