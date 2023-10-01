@@ -9,10 +9,10 @@ function App() {
   const router = useRoutes(routes)
 
   return (
-    <>
-      <div className="app">
-        {router}
-      </div>
+    <> 
+        <div className="app">
+          {router}
+        </div>
     </>
   )
 }

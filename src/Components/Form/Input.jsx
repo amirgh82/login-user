@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import './Input.css'
 
-
 export default function Input({ type, placeholder, icon }) {
 
     return (
