@@ -4,6 +4,7 @@ import Input from '../../Components/Form/Input'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { AiOutlineEye } from 'react-icons/ai'
 import { AiOutlineEyeInvisible } from 'react-icons/ai'
+import Button from '../../Components/Button/Button'
 
 export default function Login() {
   return (
@@ -15,6 +16,7 @@ export default function Login() {
             <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
             <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEye />} />
             <span className='forgot-password'>فراموشی رمز عبور</span>
+            <Button>ورود</Button>
           </form>
         </div>
         <div className="login-picture">
