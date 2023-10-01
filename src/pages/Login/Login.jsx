@@ -4,6 +4,7 @@ import Input from '../../Components/Form/Input'
 import Button from '../../Components/Button/Button'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { AiOutlineEyeInvisible } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -17,6 +18,10 @@ export default function Login() {
             <span className='forgot-password'>فراموشی رمز عبور</span>
             <Button>ورود</Button>
           </form>
+          <div className="switch-register">
+            <span>حساب کاربری ندارید؟</span>
+            <Link to='/register'>ثبت نام</Link>
+          </div>
         </div>
         <div className="login-picture">
 

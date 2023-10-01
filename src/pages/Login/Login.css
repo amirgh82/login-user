@@ -14,7 +14,7 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--login-bg-color);
     width: 45%;
     padding: 80px;
@@ -38,7 +38,32 @@
     background-color: var(--purple-color);
 }
 
-.forgot-password{
+.forgot-password {
     cursor: pointer;
     font-size: 0.8rem;
+}
+
+.switch-register {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.switch-register a {
+    background-color: var(--gray-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.switch-register a:hover {
+    background-color: var(--purple-color);
 }
