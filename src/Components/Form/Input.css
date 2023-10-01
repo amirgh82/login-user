@@ -1,14 +1,14 @@
 .form-control {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.form-control span {
+.form-control label {
     position: absolute;
     top: 25px;
-    right: 62px;
+    right: 0px;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -17,9 +17,16 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
+.form-control span {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    font-size: 1.3rem;
+}
+
 .form-input {
-    margin: 1rem auto;
-    width: 80%;
+    margin: 1rem 0;
+    width: 100%;
     padding: 0.5rem;
     border: none;
     border-bottom: 3px solid var(--gray-color);
@@ -44,8 +51,8 @@
     border-bottom-color: #fff;
 }
 
-.form-input:focus~span,
-.form-input:valid~span {
+.form-input:focus~label,
+.form-input:valid~label {
     transform: translateX(5px) translateY(-30px);
     -webkit-transform: translateX(5px) translateY(-30px);
     -moz-transform: translateX(5px) translateY(-30px);
