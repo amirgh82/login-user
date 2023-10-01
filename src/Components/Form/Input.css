@@ -38,12 +38,6 @@
     -o-transition: all 0.3s ease;
 }
 
-.form-input::placeholder {
-    font-family: var(--font-def);
-    font-size: 1.4rem;
-    color: #fff;
-}
-
 .form-input:focus,
 .form-input:valid {
     outline: 0;
@@ -58,4 +52,5 @@
     -moz-transform: translateX(5px) translateY(-30px);
     -ms-transform: translateX(5px) translateY(-30px);
     -o-transform: translateX(5px) translateY(-30px);
+    font-size: 0.8rem;
 }

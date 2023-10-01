@@ -8,6 +8,7 @@
     font-family: var(--font-def);
     cursor: pointer;
     margin: 1.5rem 0;
+    padding: 0.7rem 0;
     border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;

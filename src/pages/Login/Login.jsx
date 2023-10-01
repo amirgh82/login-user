@@ -11,7 +11,7 @@ export default function Login() {
     <>
       <div className="login-container">
         <div className="login-form">
-          <h2 className="login-title">به <span>web codino </span>خوش اومدید</h2>
+          <h2 className="login-title">به <span>وب کدینو </span>خوش اومدید</h2>
           <form>
             <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
             <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
