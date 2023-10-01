@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Input.css'
 
 
 export default function Input({ type, placeholder }) {
 
     return (
-        <input type={type} placeholder={placeholder} className='form-input'/>
+        <div className="form-control">
+            <input type={type} className='form-input' required />
+            <span>{placeholder}</span>
+        </div>
     )
 }

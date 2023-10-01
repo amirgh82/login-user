@@ -20,6 +20,9 @@
 body {
     direction: rtl;
     background-color: #242424;
+    overflow: hidden;
+    color: #fff;
+    font-family: sade;
 }
 
 a {
