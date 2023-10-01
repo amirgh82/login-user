@@ -1,0 +1,27 @@
+@font-face {
+    font-family: sade;
+    src: url('./../public/font/A-Sade.ttf');
+}
+
+:root {
+    --login-background-color: #333437;
+    --btn-border-color: #9C6FE4;
+    --btn-color: #925FE2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    background-color: #242424;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
