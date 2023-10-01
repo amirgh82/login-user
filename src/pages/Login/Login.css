@@ -3,7 +3,12 @@
     justify-content: space-between;
     width: 65%;
     height: 80vh;
-    background-color: red;
+    overflow: hidden;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
 }
 
 .login-form {
@@ -12,12 +17,12 @@
     justify-content: center;
     background-color: var(--login-bg-color);
     width: 45%;
+    padding: 80px;
 }
 
 .login-form form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
 }
 
@@ -26,10 +31,14 @@
     color: #fff;
     min-width: 10rem;
     font-size: 2rem;
-    margin: 0 auto;
 }
 
 .login-picture {
     width: 55%;
     background-color: var(--purple-color);
+}
+
+.forgot-password{
+    cursor: pointer;
+    font-size: 0.8rem;
 }

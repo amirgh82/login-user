@@ -14,6 +14,7 @@ export default function Login() {
           <form>
             <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
             <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEye />} />
+            <span className='forgot-password'>فراموشی رمز عبور</span>
           </form>
         </div>
         <div className="login-picture">
