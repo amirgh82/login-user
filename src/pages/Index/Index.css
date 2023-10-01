@@ -22,7 +22,7 @@
 }
 
 .link {
-    font-family: sade;
+    font-family: var(--font-def);
     font-size: 2.5rem;
     font-weight: 500;
     border: 1px solid var(--btn-border-color);

@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 80vh;
+    background-color: red;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    width: 50%;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-title {
+    font-family: var(--font-def);
+}
+
+.login-picture {
+    width: 50%;
+    background-color: var(--purple-color);
+}

@@ -7,6 +7,7 @@
     --gray-color: #333437;
     --btn-border-color: #9C6FE4;
     --purple-color: #925FE2;
+    --font-def: sade;
 }
 
 * {
@@ -23,4 +24,11 @@ body {
 a {
     color: #fff;
     text-decoration: none;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

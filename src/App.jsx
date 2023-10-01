@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
-      
-      {router}
+      <div className="app">
+        {router}
+      </div>
     </>
   )
 }
