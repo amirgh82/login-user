@@ -31,18 +31,22 @@
     padding: 0.7rem 0;
     display: inline-block;
     padding: 12px 24px;
-    border: 1px solid #4f4f4f;
     border-radius: 1.5rem;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease-in;
     position: relative;
     overflow: hidden;
     font-size: 19px;
-    color: black;
+    color: #fff;
     z-index: 1;
+    background-color: var(--gray-color);
     -webkit-border-radius: 1.5rem;
     -moz-border-radius: 1.5rem;
     -ms-border-radius: 1.5rem;
     -o-border-radius: 1.5rem;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
 }
 
 .button:before {
