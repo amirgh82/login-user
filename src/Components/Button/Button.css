@@ -12,6 +12,7 @@
     z-index: 1;
     border: none;
     border-radius: 1.5rem;
+    margin: 1.5rem 0;
     background-color: var(--gray-color);
     -webkit-border-radius: 1.5rem;
     -moz-border-radius: 1.5rem;
