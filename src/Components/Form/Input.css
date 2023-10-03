@@ -1,0 +1,78 @@
+.form-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form-control label {
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    pointer-events: none;
+    font-size: 0.7rem;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.form-control span {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    font-size: 1rem;
+}
+
+.form-input {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 3px solid var(--gray-color);
+    background-color: transparent;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-input:valid {
+    outline: 0;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.form-input:focus~label,
+.form-input:valid~label {
+    transform: translateX(5px) translateY(-30px);
+    -webkit-transform: translateX(5px) translateY(-30px);
+    -moz-transform: translateX(5px) translateY(-30px);
+    -ms-transform: translateX(5px) translateY(-30px);
+    -o-transform: translateX(5px) translateY(-30px);
+    font-size: 0.5rem;
+}
+
+/* Responsive Input component */
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:992px) {
+    .form-control label {
+        font-size: 0.6rem;
+    }
+
+    .form-control span {
+        font-size: 0.7rem;
+        top: 35px;
+    }
+
+    .form-input:focus~label,
+    .form-input:valid~label {
+        font-size: 0.45rem;
+        font-weight: 600;
+    }
+}

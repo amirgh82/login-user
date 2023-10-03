@@ -1,12 +1,15 @@
 @font-face {
-    font-family: sade;
-    src: url('./../public/font/A-Sade.ttf');
+    font-family: sans;
+    src: url('./../public//font/Iranian\ Sans.ttf');
 }
 
 :root {
     --gray-color: #333437;
     --btn-border-color: #9C6FE4;
     --purple-color: #925FE2;
+    --login-bg-color: #1C1D21;
+    --font-def: sans;
+    --font-en: archivo;
 }
 
 * {
@@ -18,9 +21,19 @@
 body {
     direction: rtl;
     background-color: #242424;
+    overflow: hidden;
+    color: #fff;
+    font-family: sans;
 }
 
 a {
     color: #fff;
     text-decoration: none;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
