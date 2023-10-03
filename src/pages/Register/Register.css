@@ -50,13 +50,6 @@
     width: 75%;
 }
 
-.forgot-password {
-    cursor: pointer;
-    font-size: 0.5rem;
-    font-weight: 500;
-    margin: 1rem 0 2rem 0;
-}
-
 .switch-register {
     display: flex;
     justify-content: space-evenly;
