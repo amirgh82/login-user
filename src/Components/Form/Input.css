@@ -56,6 +56,12 @@
     font-size: 0.5rem;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+
 /* Responsive Input component */
 
 @media screen and (max-width:1200px) {}
