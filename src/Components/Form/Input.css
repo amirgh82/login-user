@@ -10,7 +10,7 @@
     top: 35px;
     right: 0px;
     pointer-events: none;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -22,7 +22,7 @@
     position: absolute;
     top: 30px;
     left: 0px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .form-input {
@@ -53,5 +53,26 @@
     -moz-transform: translateX(5px) translateY(-30px);
     -ms-transform: translateX(5px) translateY(-30px);
     -o-transform: translateX(5px) translateY(-30px);
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+}
+
+/* Responsive Input component */
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:992px) {
+    .form-control label {
+        font-size: 0.6rem;
+    }
+
+    .form-control span {
+        font-size: 0.7rem;
+        top: 35px;
+    }
+
+    .form-input:focus~label,
+    .form-input:valid~label {
+        font-size: 0.45rem;
+        font-weight: 600;
+    }
 }
