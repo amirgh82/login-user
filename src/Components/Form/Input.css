@@ -7,9 +7,10 @@
 
 .form-control label {
     position: absolute;
-    top: 25px;
+    top: 35px;
     right: 0px;
     pointer-events: none;
+    font-size: 0.6rem;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -52,5 +53,5 @@
     -moz-transform: translateX(5px) translateY(-30px);
     -ms-transform: translateX(5px) translateY(-30px);
     -o-transform: translateX(5px) translateY(-30px);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }

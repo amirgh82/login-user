@@ -7,6 +7,11 @@ import { AiOutlineEyeInvisible } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 export default function Login() {
+
+  const userLogin = () => {
+    console.log('login');
+  }
+
   return (
     <>
       <div className="login-container">
@@ -16,11 +21,15 @@ export default function Login() {
             <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
             <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
             <span className='forgot-password'>فراموشی رمز عبور</span>
-            <Button>ورود</Button>
+            <Button
+              type='submit'
+              onClick={userLogin}
+              disabled={false}
+            >ورود</Button>
           </form>
           <div className="switch-register">
             <span>حساب کاربری ندارید؟</span>
-            <Link to='/register'>ثبت نام</Link>
+            <Button to='/register'>ثبت نام</Button>
           </div>
         </div>
         <div className="login-left">
