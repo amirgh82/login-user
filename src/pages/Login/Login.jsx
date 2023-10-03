@@ -11,7 +11,7 @@ export default function Login() {
     <>
       <div className="login-container">
         <div className="login-form">
-          <h2 className="login-title">به <span>وب کدینو </span>خوش اومدید</h2>
+          <h2 className="login-title">ورود</h2>
           <form>
             <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
             <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
@@ -23,8 +23,9 @@ export default function Login() {
             <Link to='/register'>ثبت نام</Link>
           </div>
         </div>
-        <div className="login-picture">
-
+        <div className="login-left">
+          <h2 className="login-title">به <span>وب کدینو </span>خوش اومدید</h2>
+          <img className='login-picture' src="./../../../public/images/Coding workshop-bro.svg" alt="coding workshop" />
         </div>
       </div>
     </>

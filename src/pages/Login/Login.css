@@ -30,16 +30,24 @@
     font-family: var(--font-def);
     color: #fff;
     min-width: 10rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .login-title span {
-    color: var(--purple-color);
+    color: var(--gray-color);
+}
+
+.login-left {
+    width: 55%;
+    background-color: var(--purple-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
 }
 
 .login-picture {
-    width: 55%;
-    background-color: var(--purple-color);
+    width: 75%;
 }
 
 .forgot-password {
