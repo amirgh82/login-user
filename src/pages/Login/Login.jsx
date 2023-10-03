@@ -34,7 +34,7 @@ export default function Login() {
         </div>
         <div className="login-left">
           <h2 className="login-title">به <span>وب کدینو </span>خوش اومدید</h2>
-          <img className='login-picture' src="./../../../public/images/Coding workshop-bro.svg" alt="coding workshop" />
+          <img className='login-picture' src="./../../../public/images/Login-amico.svg" alt="coding workshop" />
         </div>
       </div>
     </>

@@ -1,8 +1,46 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Register.css'
+import Input from '../../Components/Form/Input'
+import Button from '../../Components/Button/Button'
+import { FaRegUserCircle } from 'react-icons/fa'
+import { AiOutlineEyeInvisible } from 'react-icons/ai'
+import { AiOutlineMail } from 'react-icons/ai'
+import { HiOutlinePhone } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 
-export default function Register() {
+export default function Login() {
+
+    const userRegister = () => {
+        console.log('userRegister');
+    }
+
     return (
-        <div>Register</div>
+        <>
+            <div className="login-container">
+                <div className="login-left">
+                    <h2 className="login-title">به <span>وب کدینو </span>خوش اومدید</h2>
+                    <img className='login-picture' src="./../../../public/images/Mobile login-amico.svg" alt="coding workshop" />
+                </div>
+                <div className="login-form">
+                    <h2 className="login-title">ثبت نام</h2>
+                    <form>
+                        <Input type='text' placeholder='نام کاربری' icon={<FaRegUserCircle />} />
+                        <Input type='email' placeholder='ایمیل' icon={<AiOutlineMail />} />
+                        <Input type='number' placeholder='شماره تماس' icon={<HiOutlinePhone />} />
+                        <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
+                        <Button
+                            type='submit'
+                            onClick={userRegister}
+                            disabled={false}
+                        >ثبت نام</Button>
+                    </form>
+                    <div className="switch-register">
+                        <span>حساب کاربری دارم</span>
+                        <Button to='/login'>ورود</Button>
+                    </div>
+                </div>
+
+            </div>
+        </>
     )
 }
