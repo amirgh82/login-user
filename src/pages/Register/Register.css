@@ -1,7 +1,7 @@
-.login-container {
+.register-container {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 65%;
     height: 80vh;
     overflow: hidden;
     border-radius: 3rem;
@@ -11,30 +11,34 @@
     -o-border-radius: 3rem;
 }
 
-.login-form {
+.register-form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: var(--login-bg-color);
+    width: 45%;
+    padding: 60px;
 }
 
-.login-form form {
+.register-form form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 0.5rem;
 }
 
-.login-title {
+.register-title {
     font-family: var(--font-def);
     color: #fff;
     min-width: 10rem;
     font-size: 1.3rem;
 }
 
-.login-title span {
+.register-title span {
     color: var(--gray-color);
 }
 
-.login-left {
+.register-right {
     width: 55%;
     background-color: var(--purple-color);
     display: flex;
@@ -43,7 +47,7 @@
     align-items: center;
 }
 
-.login-picture {
+.register-picture {
     width: 75%;
 }
 
@@ -57,29 +61,29 @@
     font-size: 0.6rem;
 }
 
-/* Responsive login */
+/* Responsive register */
 
 @media screen and (max-width:1200px) {
-    .login-form {
+    .register-form {
         padding: 40px;
     }
 
-    .login-title {
+    .register-title {
         font-size: 1rem;
     }
 
-    .login-container {
+    .register-container {
         width: 80%;
     }
 }
 
 
 @media screen and (max-width:992px) {
-    .login-container {
+    .register-container {
         width: 85%;
     }
 
-    .login-form {
+    .register-form {
         padding: 30px;
     }
 
@@ -89,30 +93,30 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .login-container {
+    .register-container {
         width: 95%;
     }
 
-    .login-title {
+    .register-title {
         font-size: 0.8rem;
     }
 
-    .login-form {
+    .register-form {
         padding: 20px;
         flex-grow: 1;
     }
 
-    .login-left {
+    .register-left {
         flex-grow: 1;
     }
 }
 
 @media screen and (max-width:576px) {
-    .login-form {
+    .register-form {
         width: 1000%;
     }
 
-    .login-left {
+    .register-right {
         display: none;
     }
 
