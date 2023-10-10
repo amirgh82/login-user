@@ -1,7 +1,7 @@
 .form-control {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     position: relative;
 }
 
@@ -18,7 +18,7 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
-.form-control span {
+.icon {
     position: absolute;
     top: 30px;
     left: 0px;
@@ -56,6 +56,11 @@
     font-size: 0.5rem;
 }
 
+.error{
+    font-size: 0.5rem;
+    color: red;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     display: none;
@@ -71,7 +76,7 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 0.6rem;
     }
 
-    .form-control span {
+    .icon {
         font-size: 0.9rem;
         top: 35px;
     }

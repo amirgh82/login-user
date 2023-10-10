@@ -24,10 +24,10 @@ export default function Login() {
                 <div className="register-form">
                     <h2 className="register-title">ثبت نام</h2>
                     <form>
-                        <Input type='text' placeholder='نام کاربری' icon={<FaRegUserCircle />} />
-                        <Input type='email' placeholder='ایمیل' icon={<AiOutlineMail />} />
-                        <Input type='number' placeholder='شماره تماس' icon={<HiOutlinePhone />} />
-                        <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
+                        <Input type='text' placeholder='نام کاربری' icon={<FaRegUserCircle />} name='username' />
+                        <Input type='email' placeholder='ایمیل' icon={<AiOutlineMail />} name='email' />
+                        <Input type='number' placeholder='شماره تماس' icon={<HiOutlinePhone />} name='number' />
+                        <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} name='password' />
                         <Button
                             type='submit'
                             onClick={userRegister}

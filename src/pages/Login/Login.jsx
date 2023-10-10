@@ -1,16 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './Login.css'
 import Input from '../../Components/Form/Input'
 import Button from '../../Components/Button/Button'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { AiOutlineEyeInvisible } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
 
 export default function Login() {
 
   const userLogin = (event) => {
     event.preventDefault()
-    console.log('login');
+    
   }
 
   return (
@@ -19,8 +18,8 @@ export default function Login() {
         <div className="login-form">
           <h2 className="login-title">ورود</h2>
           <form>
-            <Input type='text' placeholder='نام کاربری یا ایمیل' icon={<FaRegUserCircle />} />
-            <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} />
+            <Input type='text' placeholder='نام کاربری' icon={<FaRegUserCircle />} name='username' />
+            <Input type='password' placeholder='رمز عبور' icon={<AiOutlineEyeInvisible />} name='password' />
             <span className='forgot-password'>فراموشی رمز عبور</span>
             <Button
               type='submit'
