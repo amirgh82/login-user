@@ -14,9 +14,11 @@ export default function Login() {
   const userRegister = (event) => {
     event.preventDefault();
     if (areInputsValid) {
-      console.log("register");
+      //   console.log("register");
+      alert("ثبت نام با موفقیت انجام شد :)");
     } else {
-      console.log("Invalid inputs. Cannot register.");
+      //   console.log("Invalid inputs. Cannot register.");
+      alert("لطفا اطلاعات را درست وارد کنید :(");
     }
   };
 

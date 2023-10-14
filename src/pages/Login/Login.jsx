@@ -6,15 +6,16 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 export default function Login() {
-
   const [areInputsValid, setAreInputsValid] = useState(false);
 
   const userLogin = (event) => {
     event.preventDefault();
     if (areInputsValid) {
-      console.log("login");
+      // console.log("login");
+      alert("ورود با موفقیت انجام شد :)");
     } else {
-      console.log("Invalid inputs. Cannot login.");
+      // console.log("Invalid inputs. Cannot login.");
+      alert("لطفا اطلاعات را درست وارد کنید :(");
     }
   };
 

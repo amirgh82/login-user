@@ -14,7 +14,9 @@ export default function Input({
   const [isValidAllInputs, setIsValidAllInputs] = useState(false);
 
   useEffect(() => {
-    onInputChange(Object.keys(errors).length === 0);
+    if (value && Object.keys(errors).length === 0) {
+      onInputChange(true);
+    } 
   }, [errors, onInputChange]);
 
   const handleChange = (event) => {
