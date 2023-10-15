@@ -2,56 +2,27 @@ import React, { useEffect, useState } from "react";
 import "./Input.css";
 import regex from "../../validator/regex";
 
-export default function Input({
-  type,
-  placeholder,
-  icon,
-  name,
-  onInputChange,
-}) {
-  const [value, setValue] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isValidAllInputs, setIsValidAllInputs] = useState(false);
-
-  useEffect(() => {
-    if (value && Object.keys(errors).length === 0) {
-      onInputChange(true);
-    } 
-  }, [errors, onInputChange]);
+export default function Input({ type, placeholder, icon, name, onValidation }) {
+  const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState("");
 
   const handleChange = (event) => {
-    setValue(event.target.value.trim());
-    setErrors(validateInput(event.target.value));
-  };
-
-  const validateInput = (value) => {
-    const error = {};
-
-    if (type === "email") {
-      if (!regex.testEmail(value)) {
-        error.email = "ایمیل باید انگلیسی باشد و شامل @ و  پسوند باشد";
-      }
-    }
-    if (type === "password") {
-      if (value.length < 8) {
-        error.password =
-          "رمز عبور باید با حروف و اعداد انگلیسی باشد و حداقل 8 کاراکتر باشد";
-      }
+    const inputValue = event.target.value.trim();
+    setInputValue(inputValue);
+    let isValid = false;
+    if (name === "email") {
+      isValid = regex.testEmail(inputValue);
+    } else if (name === "username") {
+      isValid = regex.testUsername(inputValue);
+    } else if (name === "phone") {
+      isValid = regex.testPhone(inputValue);
+    } else if (name === "password") {
+      isValid = regex.testPassword(inputValue);
     }
 
-    if (type === "number") {
-      if (!regex.testPhone(value)) {
-        error.phone = "شماره باید با 09 شروغ شود و 11 رقم باشد";
-      }
-    }
+    setError(isValid ? "" : "ورودی نامعتبر!");
 
-    if (type === "text") {
-      if (value.length < 4) {
-        error.username = "نام کاربری باید حداقل 4 کاراکتر داشته باشد";
-      }
-    }
-
-    return error;
+    onValidation(name, isValid);
   };
 
   return (
@@ -63,12 +34,9 @@ export default function Input({
         name={name}
         required
         onChange={handleChange}
-        value={value}
+        value={inputValue}
       />
-      {errors.username && <span className="error">{errors.username}</span>}
-      {errors.password && <span className="error">{errors.password}</span>}
-      {errors.email && <span className="error">{errors.email}</span>}
-      {errors.phone && <span className="error">{errors.phone}</span>}
+      <span className="error">{error}</span>
       <label>{placeholder}</label>
     </div>
   );

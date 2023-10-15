@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Register.css";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Button/Button";
@@ -7,23 +7,26 @@ import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlinePhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import regex from "../../validator/regex";
 
-export default function Login() {
-  const [areInputsValid, setAreInputsValid] = useState(false);
+export default function Register() {
+  const [usernameValid, setUsernameValid] = useState(false);
+  const [passwordValid, setPasswordValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
+  const [phoneValid, setPhoneValid] = useState(false);
+  const [formError, setFormError] = useState(
+    "لطفاً اطلاعات را درست وارد کنید."
+  );
 
   const userRegister = (event) => {
     event.preventDefault();
-    if (areInputsValid) {
-      //   console.log("register");
-      alert("ثبت نام با موفقیت انجام شد :)");
-    } else {
-      //   console.log("Invalid inputs. Cannot register.");
-      alert("لطفا اطلاعات را درست وارد کنید :(");
-    }
-  };
 
-  const handleInputChange = (isValid) => {
-    setAreInputsValid(isValid);
+    if (!usernameValid && !passwordValid && !emailValid && !phoneValid) {
+      setFormError("لطفاً اطلاعات را درست وارد کنید.");
+    } else {
+      setFormError("فرم با موفقیت ارسال شد!");
+    }
+    alert(formError);
   };
 
   return (
@@ -47,28 +50,32 @@ export default function Login() {
               placeholder="نام کاربری"
               icon={<FaRegUserCircle />}
               name="username"
-              onInputChange={handleInputChange}
+              regexPattern={regex.testUsername}
+              onValidation={(name, isValid) => setUsernameValid(isValid)}
             />
             <Input
               type="email"
               placeholder="ایمیل"
               icon={<AiOutlineMail />}
               name="email"
-              onInputChange={handleInputChange}
+              regexPattern={regex.testEmail}
+              onValidation={(name, isValid) => setEmailValid(isValid)}
             />
             <Input
               type="number"
               placeholder="شماره تماس"
               icon={<HiOutlinePhone />}
-              name="number"
-              onInputChange={handleInputChange}
+              name="phone"
+              regexPattern={regex.testPhone}
+              onValidation={(name, isValid) => setPhoneValid(isValid)}
             />
             <Input
               type="password"
               placeholder="رمز عبور"
               icon={<AiOutlineEyeInvisible />}
               name="password"
-              onInputChange={handleInputChange}
+              regexPattern={regex.testPassword}
+              onValidation={(name, isValid) => setPasswordValid(isValid)}
             />
             <Button type="submit" onClick={userRegister} disabled={false}>
               ثبت نام

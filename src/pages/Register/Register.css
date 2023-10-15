@@ -1,128 +1,125 @@
 .register-container {
-    display: flex;
-    justify-content: space-between;
-    width: 65%;
-    height: 80vh;
-    overflow: hidden;
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
-    -ms-border-radius: 3rem;
-    -o-border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
 }
 
 .register-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: var(--login-bg-color);
-    width: 45%;
-    padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--login-bg-color);
+  width: 45%;
+  padding: 10px 60px;
 }
 
 .register-form form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .register-title {
-    font-family: var(--font-def);
-    color: #fff;
-    min-width: 10rem;
-    font-size: 1.3rem;
-    margin: 0.5rem 0 ;
+  font-family: var(--font-def);
+  color: #fff;
+  min-width: 10rem;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
 }
 
 .register-title span {
-    color: var(--gray-color);
+  color: var(--gray-color);
 }
 
 .register-right {
-    width: 55%;
-    background-color: var(--purple-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 55%;
+  background-color: var(--purple-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .register-picture {
-    width: 75%;
+  width: 75%;
 }
 
 .switch-register {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .switch-register span {
-    font-size: 0.6rem;
+  font-size: 0.6rem;
 }
 
 /* Responsive register */
 
-@media screen and (max-width:1200px) {
-    .register-form {
-        padding: 40px;
-    }
+@media screen and (max-width: 1200px) {
+  .register-form {
+    padding: 40px;
+  }
 
-    .register-title {
-        font-size: 1rem;
-    }
+  .register-title {
+    font-size: 1rem;
+  }
 
-    .register-container {
-        width: 80%;
-    }
+  .register-container {
+    width: 80%;
+  }
 }
 
+@media screen and (max-width: 992px) {
+  .register-container {
+    width: 85%;
+  }
 
-@media screen and (max-width:992px) {
-    .register-container {
-        width: 85%;
-    }
+  .register-form {
+    padding: 30px;
+  }
 
-    .register-form {
-        padding: 30px;
-    }
-
-    .switch-register span {
-        font-size: 0.5rem;
-    }
+  .switch-register span {
+    font-size: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .register-container {
-        width: 95%;
-    }
+  .register-container {
+    width: 95%;
+  }
 
-    .register-title {
-        font-size: 0.8rem;
-    }
+  .register-title {
+    font-size: 0.8rem;
+  }
 
-    .register-form {
-        padding: 20px;
-        flex-grow: 1;
-    }
+  .register-form {
+    padding: 20px;
+    flex-grow: 1;
+  }
 
-    .register-left {
-        flex-grow: 1;
-    }
+  .register-left {
+    flex-grow: 1;
+  }
 }
 
-@media screen and (max-width:576px) {
-    .register-form {
-        width: 1000%;
-    }
+@media screen and (max-width: 576px) {
+  .register-form {
+    width: 1000%;
+  }
 
-    .register-right {
-        display: none;
-    }
+  .register-right {
+    display: none;
+  }
 
-    .switch-register span {
-        font-size: 0.6rem;
-    }
-
+  .switch-register span {
+    font-size: 0.6rem;
+  }
 }

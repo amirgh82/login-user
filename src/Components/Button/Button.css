@@ -1,85 +1,86 @@
 .button {
-    font-family: var(--font-def);
-    cursor: pointer;
-    display: inline-block;
-    padding: 15px 24px;
-    transition: all 0.3s ease-in;
-    position: relative;
-    overflow: hidden;
-    font-size: 0.7rem;
-    font-weight: 900;
-    color: #fff;
-    z-index: 1;
-    border: none;
-    border-radius: 1.5rem;
-    margin: 1.5rem 0;
-    background-color: var(--gray-color);
-    -webkit-border-radius: 1.5rem;
-    -moz-border-radius: 1.5rem;
-    -ms-border-radius: 1.5rem;
-    -o-border-radius: 1.5rem;
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -ms-transition: all 0.3s ease-in;
-    -o-transition: all 0.3s ease-in;
+  font-family: var(--font-def);
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 24px;
+  transition: all 0.3s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: #fff;
+  z-index: 1;
+  border: none;
+  border-radius: 1.5rem;
+  margin: 0.7rem 0;
+  background-color: var(--gray-color);
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
 }
 
 .button:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-    top: 100%;
-    width: 140%;
-    height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
 }
 
 .button:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-    top: 180%;
-    width: 160%;
-    height: 190%;
-    background-color: var(--purple-color);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: var(--purple-color);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
 }
 
 .button:hover {
-    color: #ffffff;
-    border: 1px solid var(--purple-color);
+  color: #ffffff;
+  border: 1px solid var(--purple-color);
 }
 
 .button:hover:before {
-    top: -35%;
-    background-color: var(--purple-color);
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  top: -35%;
+  background-color: var(--purple-color);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .button:hover:after {
-    top: -45%;
-    background-color: var(--purple-color);
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  top: -45%;
+  background-color: var(--purple-color);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 /* Responsive Button  */
-@media screen and (max-width:1200px) {}
+@media screen and (max-width: 1200px) {
+}
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width: 992px) {
+}
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-
-    .button {
-        font-size: 0.7rem;
-        padding: 10px 15px;
-    }
+  .button {
+    font-size: 0.7rem;
+    padding: 10px 15px;
+  }
 }
