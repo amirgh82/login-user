@@ -5,24 +5,36 @@ import Button from "../../Components/Button/Button";
 import { FaRegUserCircle } from "react-icons/fa";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import regex from "../../validator/regex";
+import Swal from "sweetalert2";
 
 export default function Login() {
   const [usernameValid, setUsernameValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
-  const [formError, setFormError] = useState(
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [formErrorTitle, setFormErrorTitle] = useState(
     "لطفاً اطلاعات را درست وارد کنید."
   );
 
   const userLogin = (event) => {
     event.preventDefault();
 
-    if (!usernameValid && !passwordValid) {
-      setFormError("لطفاً اطلاعات را درست وارد کنید.");
-    } else {
-      setFormError("فرم با موفقیت ارسال شد!");
-    }
-    alert(formError);
+    Swal.fire({
+      title: formErrorTitle,
+      icon: isFormValid ? "success" : "error",
+      confirmButtonText: isFormValid ? "ورود" : "تکمیل اطلاعات",
+      customClass: ".swal",
+    });
   };
+
+  useEffect(() => {
+    if (usernameValid && passwordValid) {
+      setIsFormValid(true);
+      setFormErrorTitle("به کدینو خوش اومدید");
+    } else {
+      setIsFormValid(false);
+      setFormErrorTitle("لطفاً اطلاعات را درست وارد کنید.");
+    }
+  }, [usernameValid, passwordValid]);
 
   return (
     <>
