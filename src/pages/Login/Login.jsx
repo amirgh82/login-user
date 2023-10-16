@@ -38,8 +38,8 @@ export default function Login() {
 
   return (
     <>
-      <div className="login-container">
-        <div className="login-form">
+      <div className="form-container">
+        <div className="form">
           <h2 className="form-title">ورود</h2>
           <form>
             <Input
@@ -73,7 +73,7 @@ export default function Login() {
             به <span>وب کدینو </span>خوش اومدید
           </h2>
           <img
-            className="login-picture"
+            className="form-picture"
             src="./../../../public/images/Login-amico.svg"
             alt="coding workshop"
           />

@@ -43,18 +43,18 @@ export default function Register() {
 
   return (
     <>
-      <div className="register-container">
+      <div className="form-container">
         <div className="register-right">
           <h2 className="form-title">
             به <span>وب کدینو </span>خوش اومدید
           </h2>
           <img
-            className="register-picture"
+            className="form-picture"
             src="./../../../public/images/Mobile login-amico.svg"
             alt="coding workshop"
           />
         </div>
-        <div className="register-form">
+        <div className="form">
           <h2 className="form-title">ثبت نام</h2>
           <form>
             <Input

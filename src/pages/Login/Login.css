@@ -1,31 +1,3 @@
-.login-container {
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 3rem;
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
-  -ms-border-radius: 3rem;
-  -o-border-radius: 3rem;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: var(--login-bg-color);
-  width: 45%;
-  padding: 60px;
-}
-
-.login-form form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .login-left {
   width: 55%;
   background-color: var(--purple-color);
@@ -35,10 +7,6 @@
   align-items: center;
 }
 
-.login-picture {
-  width: 75%;
-}
-
 .forgot-password {
   cursor: pointer;
   font-size: 0.7rem;
@@ -46,57 +14,15 @@
   margin: 1rem 0;
 }
 
-.switch-register {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 /* Responsive login */
 
-@media screen and (max-width: 1200px) {
-  .login-form {
-    padding: 40px;
-  }
-
-  .login-container {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .login-container {
-    width: 85%;
-  }
-
-  .login-form {
-    padding: 30px;
-  }
-}
-
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  .login-container {
-    width: 95%;
-  }
-
-  .login-title {
-    font-size: 1.2rem;
-  }
-
-  .login-form {
-    padding: 20px;
-    flex-grow: 1;
-  }
   .login-left {
     flex-grow: 1;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .login-form {
-    width: 1000%;
-  }
-
   .login-left {
     display: none;
   }
