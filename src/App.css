@@ -1,39 +1,65 @@
 @font-face {
-    font-family: sans;
-    src: url('./../public//font/Iranian\ Sans.ttf');
+  font-family: yekan;
+  src: url(/public/font/Yekan.ttf);
+}
+@font-face {
+  font-family: titr;
+  src: url(/public/font/B\ Titr\ Bold_0.ttf);
 }
 
 :root {
-    --gray-color: #333437;
-    --btn-border-color: #9C6FE4;
-    --purple-color: #925FE2;
-    --login-bg-color: #1C1D21;
-    --font-def: sans;
-    --font-en: archivo;
+  --gray-color: #333437;
+  --btn-border-color: #9c6fe4;
+  --purple-color: #925fe2;
+  --login-bg-color: #1c1d21;
+  --font-def: yekan;
+  --font-en: archivo;
+  --font-titr: titr;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    direction: rtl;
-    background-color: #242424;
-    overflow: hidden;
-    color: #fff;
-    font-family: sans;
+  direction: rtl;
+  background-color: #242424;
+  overflow: hidden;
+  color: #fff;
+  font-family: yekan;
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-title {
+  font-family: var(--font-def);
+  color: #fff;
+  min-width: 10rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.form-title span {
+  color: var(--gray-color);
+}
+
+.switch-register span {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 992px) {
+  .switch-register span {
+    font-size: 0.7rem;
+  }
 }

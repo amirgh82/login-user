@@ -33,7 +33,7 @@ export default function Register() {
     <>
       <div className="register-container">
         <div className="register-right">
-          <h2 className="register-title">
+          <h2 className="form-title">
             به <span>وب کدینو </span>خوش اومدید
           </h2>
           <img
@@ -43,7 +43,7 @@ export default function Register() {
           />
         </div>
         <div className="register-form">
-          <h2 className="register-title">ثبت نام</h2>
+          <h2 className="form-title">ثبت نام</h2>
           <form>
             <Input
               type="text"

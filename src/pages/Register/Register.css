@@ -26,17 +26,7 @@
   width: 100%;
 }
 
-.register-title {
-  font-family: var(--font-def);
-  color: #fff;
-  min-width: 10rem;
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-}
 
-.register-title span {
-  color: var(--gray-color);
-}
 
 .register-right {
   width: 55%;
@@ -57,9 +47,6 @@
   align-items: center;
 }
 
-.switch-register span {
-  font-size: 0.6rem;
-}
 
 /* Responsive register */
 
@@ -86,9 +73,6 @@
     padding: 30px;
   }
 
-  .switch-register span {
-    font-size: 0.5rem;
-  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -117,9 +101,5 @@
 
   .register-right {
     display: none;
-  }
-
-  .switch-register span {
-    font-size: 0.6rem;
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 70%;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
@@ -26,17 +26,6 @@
   width: 100%;
 }
 
-.login-title {
-  font-family: var(--font-def);
-  color: #fff;
-  min-width: 10rem;
-  font-size: 1.3rem;
-}
-
-.login-title span {
-  color: var(--gray-color);
-}
-
 .login-left {
   width: 55%;
   background-color: var(--purple-color);
@@ -52,9 +41,9 @@
 
 .forgot-password {
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .switch-register {
@@ -63,19 +52,11 @@
   align-items: center;
 }
 
-.switch-register span {
-  font-size: 0.6rem;
-}
-
 /* Responsive login */
 
 @media screen and (max-width: 1200px) {
   .login-form {
     padding: 40px;
-  }
-
-  .login-title {
-    font-size: 1rem;
   }
 
   .login-container {
@@ -91,10 +72,6 @@
   .login-form {
     padding: 30px;
   }
-
-  .switch-register span {
-    font-size: 0.5rem;
-  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -103,7 +80,7 @@
   }
 
   .login-title {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .login-form {
@@ -122,9 +99,5 @@
 
   .login-left {
     display: none;
-  }
-
-  .switch-register span {
-    font-size: 0.6rem;
   }
 }

@@ -28,7 +28,7 @@ export default function Login() {
     <>
       <div className="login-container">
         <div className="login-form">
-          <h2 className="login-title">ورود</h2>
+          <h2 className="form-title">ورود</h2>
           <form>
             <Input
               type="text"
@@ -57,7 +57,7 @@ export default function Login() {
           </div>
         </div>
         <div className="login-left">
-          <h2 className="login-title">
+          <h2 className="form-title">
             به <span>وب کدینو </span>خوش اومدید
           </h2>
           <img
