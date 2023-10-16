@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "./Register.css";
+// Input and Button component
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Button/Button";
+// icon
 import { FaRegUserCircle } from "react-icons/fa";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlinePhone } from "react-icons/hi";
-import { Link } from "react-router-dom";
+// regex to validate forms
 import regex from "../../validator/regex";
+// swal library for modal display
 import Swal from "sweetalert2";
 
 export default function Register() {
+  // Getting the validity of the inputs
   const [usernameValid, setUsernameValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
@@ -20,9 +24,11 @@ export default function Register() {
     "لطفاً اطلاعات را درست وارد کنید."
   );
 
+  // submit register form and its operations
   const userRegister = (event) => {
     event.preventDefault();
 
+    // swal alert code
     Swal.fire({
       title: formErrorTitle,
       icon: isFormValid ? "success" : "error",
@@ -31,6 +37,7 @@ export default function Register() {
     });
   };
 
+  // validate inputs
   useEffect(() => {
     if (usernameValid && passwordValid && emailValid && phoneValid) {
       setIsFormValid(true);
@@ -42,6 +49,7 @@ export default function Register() {
   }, [usernameValid, passwordValid, emailValid, phoneValid]);
 
   return (
+    // register html code
     <>
       <div className="form-container">
         <div className="register-right">
@@ -62,7 +70,9 @@ export default function Register() {
               placeholder="نام کاربری"
               icon={<FaRegUserCircle />}
               name="username"
+              // regex prop
               regexPattern={regex.testUsername}
+              // validate input
               onValidation={(name, isValid) => setUsernameValid(isValid)}
             />
             <Input
@@ -70,7 +80,9 @@ export default function Register() {
               placeholder="ایمیل"
               icon={<AiOutlineMail />}
               name="email"
+              // regex prop
               regexPattern={regex.testEmail}
+              // validate input
               onValidation={(name, isValid) => setEmailValid(isValid)}
             />
             <Input
@@ -78,7 +90,9 @@ export default function Register() {
               placeholder="شماره تماس"
               icon={<HiOutlinePhone />}
               name="phone"
+              // regex prop
               regexPattern={regex.testPhone}
+              // validate input
               onValidation={(name, isValid) => setPhoneValid(isValid)}
             />
             <Input
@@ -86,7 +100,9 @@ export default function Register() {
               placeholder="رمز عبور"
               icon={<AiOutlineEyeInvisible />}
               name="password"
+              // regex prop
               regexPattern={regex.testPassword}
+              // validate input
               onValidation={(name, isValid) => setPasswordValid(isValid)}
             />
             <Button type="submit" onClick={userRegister} disabled={false}>

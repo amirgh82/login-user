@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Button.css'
 
 export default function Button(props) {
-
+// Get the button type and set it
     if (props.to) {
         return (
             <Link to={props.to} className='button'>

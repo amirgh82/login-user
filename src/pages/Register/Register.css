@@ -1,3 +1,4 @@
+/* register code */
 .register-right {
   width: 55%;
   background-color: var(--purple-color);
@@ -6,6 +7,8 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+/* Responsive register */
 @media screen and (max-width: 576px) {
   .register-right {
     display: none;

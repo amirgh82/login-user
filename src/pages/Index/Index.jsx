@@ -1,3 +1,4 @@
+// Home page of the site
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Index.css'

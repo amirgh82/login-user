@@ -1,13 +1,18 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./Login.css";
+// Input and Button component
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Button/Button";
+// icon
 import { FaRegUserCircle } from "react-icons/fa";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
+// regex to validate forms
 import regex from "../../validator/regex";
+// swal library for modal display
 import Swal from "sweetalert2";
 
 export default function Login() {
+  // Getting the validity of the inputs
   const [usernameValid, setUsernameValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
@@ -15,9 +20,11 @@ export default function Login() {
     "لطفاً اطلاعات را درست وارد کنید."
   );
 
+  // submit login form and its operations
   const userLogin = (event) => {
     event.preventDefault();
 
+    // swal alert code
     Swal.fire({
       title: formErrorTitle,
       icon: isFormValid ? "success" : "error",
@@ -25,7 +32,7 @@ export default function Login() {
       customClass: ".swal",
     });
   };
-
+  // validate inputs
   useEffect(() => {
     if (usernameValid && passwordValid) {
       setIsFormValid(true);
@@ -37,6 +44,7 @@ export default function Login() {
   }, [usernameValid, passwordValid]);
 
   return (
+    // login html code
     <>
       <div className="form-container">
         <div className="form">
@@ -47,7 +55,9 @@ export default function Login() {
               placeholder="نام کاربری"
               icon={<FaRegUserCircle />}
               name="username"
+              // regex prop
               regexPattern={regex.testEmail}
+              // validate input
               onValidation={(name, isValid) => setUsernameValid(isValid)}
             />
             <Input
@@ -55,7 +65,9 @@ export default function Login() {
               placeholder="رمز عبور"
               icon={<AiOutlineEyeInvisible />}
               name="password"
+              // regex prop
               regexPattern={regex.testPassword}
+              // validate input
               onValidation={(name, isValid) => setPasswordValid(isValid)}
             />
             <span className="forgot-password">فراموشی رمز عبور</span>
