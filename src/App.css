@@ -58,6 +58,26 @@ a {
   font-size: 0.7rem;
 }
 
+.swal2-popup {
+  background-color: var(--gray-color);
+  color: #fff;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+
+.swal2-confirm {
+  font-family: var(--font-def);
+  background-color: var(--purple-color)!important;
+  border-radius: 3rem!important;
+  -webkit-border-radius: 3rem!important;
+  -moz-border-radius: 3rem!important;
+  -ms-border-radius: 3rem!important;
+  -o-border-radius: 3rem!important;
+}
+
 @media screen and (max-width: 992px) {
   .switch-register span {
     font-size: 0.7rem;

@@ -8,26 +8,38 @@ import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlinePhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import regex from "../../validator/regex";
+import Swal from "sweetalert2";
 
 export default function Register() {
   const [usernameValid, setUsernameValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
   const [phoneValid, setPhoneValid] = useState(false);
-  const [formError, setFormError] = useState(
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [formErrorTitle, setFormErrorTitle] = useState(
     "لطفاً اطلاعات را درست وارد کنید."
   );
 
   const userRegister = (event) => {
     event.preventDefault();
 
-    if (!usernameValid && !passwordValid && !emailValid && !phoneValid) {
-      setFormError("لطفاً اطلاعات را درست وارد کنید.");
-    } else {
-      setFormError("فرم با موفقیت ارسال شد!");
-    }
-    alert(formError);
+    Swal.fire({
+      title: formErrorTitle,
+      icon: isFormValid ? "success" : "error",
+      confirmButtonText: isFormValid ? "ورود" : "تکمیل اطلاعات",
+      customClass: ".swal",
+    });
   };
+
+  useEffect(() => {
+    if (usernameValid && passwordValid && emailValid && phoneValid) {
+      setIsFormValid(true);
+      setFormErrorTitle("به کدینو خوش اومدید");
+    } else {
+      setIsFormValid(false);
+      setFormErrorTitle("لطفاً اطلاعات را درست وارد کنید.");
+    }
+  }, [usernameValid, passwordValid, emailValid, phoneValid]);
 
   return (
     <>
