@@ -86,7 +86,7 @@ export default function Login() {
           </h2>
           <img
             className="form-picture"
-            src="./../../../public/images/Login-amico.svg"
+            src="/public/images/Login-amico.svg"
             alt="coding workshop"
           />
         </div>
