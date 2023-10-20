@@ -58,7 +58,7 @@ export default function Register() {
           </h2>
           <img
             className="form-picture"
-            src="/public/amico.svg"
+            src="/public/images/mobile.gif"
             alt="coding workshop"
           />
         </div>
